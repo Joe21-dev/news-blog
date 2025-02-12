@@ -564,7 +564,7 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "STATICFILES_DIR = {\n    os.path.join(BASE_DIR, 'public/static')\n}\nMEDIA_ROOT = os.path.join(BASE_DIR, 'public/static')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nCRISPY_ALLOWED_TEMPLATE_PACKS = \"bootstrap5\" # new\nCRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "STATICFILES_DIR = {\n    os.path.join(BASE_DIR, 'public/static')\n}\nMEDIA_ROOT = os.path.join(BASE_DIR, 'public/static')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nCRISPY_ALLOWED_TEMPLATE_PACKS = \"bootstrap5\" # new\nCRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\" # new",
         "detail": "django_project.settings",
         "documentation": {}
     },
@@ -573,7 +573,7 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'public/static')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nCRISPY_ALLOWED_TEMPLATE_PACKS = \"bootstrap5\" # new\nCRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'public/static')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nCRISPY_ALLOWED_TEMPLATE_PACKS = \"bootstrap5\" # new\nCRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\" # new\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'",
         "detail": "django_project.settings",
         "documentation": {}
     },
@@ -582,7 +582,7 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nCRISPY_ALLOWED_TEMPLATE_PACKS = \"bootstrap5\" # new\nCRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
+        "peekOfCode": "MEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nCRISPY_ALLOWED_TEMPLATE_PACKS = \"bootstrap5\" # new\nCRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\" # new\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
         "detail": "django_project.settings",
         "documentation": {}
     },
@@ -591,7 +591,7 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "CRISPY_ALLOWED_TEMPLATE_PACKS = \"bootstrap5\" # new\nCRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
+        "peekOfCode": "CRISPY_ALLOWED_TEMPLATE_PACKS = \"bootstrap5\" # new\nCRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\" # new\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
         "detail": "django_project.settings",
         "documentation": {}
     },
@@ -600,7 +600,16 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "CRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
+        "peekOfCode": "CRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\" # new\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
+        "detail": "django_project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "django_project.settings",
+        "description": "django_project.settings",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\" # new\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
         "detail": "django_project.settings",
         "documentation": {}
     },
