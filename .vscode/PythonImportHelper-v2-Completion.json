@@ -59,11 +59,43 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
         "documentation": {}
     },
     {
@@ -123,6 +155,14 @@
         "documentation": {}
     },
     {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
         "label": "UserCreationForm",
         "importPath": "django.contrib.auth.forms",
         "description": "django.contrib.auth.forms",
@@ -163,6 +203,14 @@
         "documentation": {}
     },
     {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
         "label": "SimpleTestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -176,6 +224,30 @@
         "description": "django.contrib.auth",
         "isExtraImport": true,
         "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse_lazy",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -259,11 +331,76 @@
         "documentation": {}
     },
     {
+        "label": "ListView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "DetailView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
         "label": "TemplateView",
         "importPath": "django.views.generic",
         "description": "django.views.generic",
         "isExtraImport": true,
         "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateView",
+        "importPath": "django.views.generic.edit",
+        "description": "django.views.generic.edit",
+        "isExtraImport": true,
+        "detail": "django.views.generic.edit",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteView",
+        "importPath": "django.views.generic.edit",
+        "description": "django.views.generic.edit",
+        "isExtraImport": true,
+        "detail": "django.views.generic.edit",
+        "documentation": {}
+    },
+    {
+        "label": "CreateView",
+        "importPath": "django.views.generic.edit",
+        "description": "django.views.generic.edit",
+        "isExtraImport": true,
+        "detail": "django.views.generic.edit",
         "documentation": {}
     },
     {
@@ -407,6 +544,96 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "articles.migrations.0001_initial",
+        "description": "articles.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Article\",\n            fields=[\n                (",
+        "detail": "articles.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "ArticleAdmin",
+        "kind": 6,
+        "importPath": "articles.admin",
+        "description": "articles.admin",
+        "peekOfCode": "class ArticleAdmin(admin.ModelAdmin):\n    list_display = [\n        \"title\",\n        \"body\",\n        \"author\",\n    ]\nadmin.site.register(Article, ArticleAdmin)",
+        "detail": "articles.admin",
+        "documentation": {}
+    },
+    {
+        "label": "ArticlesConfig",
+        "kind": 6,
+        "importPath": "articles.apps",
+        "description": "articles.apps",
+        "peekOfCode": "class ArticlesConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"articles\"",
+        "detail": "articles.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Article",
+        "kind": 6,
+        "importPath": "articles.models",
+        "description": "articles.models",
+        "peekOfCode": "class Article(models.Model):\n    title = models.CharField(max_length=255)\n    body = models.TextField()\n    date = models.DateTimeField(auto_now_add=True)\n    author = models.ForeignKey(\n            settings.AUTH_USER_MODEL,\n            on_delete=models.CASCADE,\n        )\n    def __str__(self):\n            return self.title",
+        "detail": "articles.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "articles.urls",
+        "description": "articles.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"<int:pk>/\", ArticleDetailView.as_view(),\n            name=\"article_detail\"), # new\n    path(\"<int:pk>/edit/\", ArticleUpdateView.as_view(),\n            name=\"article_edit\"), # new\n    path(\"<int:pk>/delete/\", ArticleDeleteView.as_view(),\n            name=\"article_delete\"),\n    path(\"new/\", ArticleCreateView.as_view(), name=\"article_new\"), # new\n    path(\"\", ArticleListView.as_view(), name=\"article_list\"),\n]",
+        "detail": "articles.urls",
+        "documentation": {}
+    },
+    {
+        "label": "ArticleListView",
+        "kind": 6,
+        "importPath": "articles.views",
+        "description": "articles.views",
+        "peekOfCode": "class ArticleListView(ListView):\n    model = Article\n    template_name = \"article_list.html\"\nclass ArticleDetailView(DetailView): # new\n    model = Article\n    template_name = \"article_detail.html\"\nclass ArticleUpdateView(UpdateView): # new\n    model = Article\n    fields = (\n        \"title\",",
+        "detail": "articles.views",
+        "documentation": {}
+    },
+    {
+        "label": "ArticleDetailView",
+        "kind": 6,
+        "importPath": "articles.views",
+        "description": "articles.views",
+        "peekOfCode": "class ArticleDetailView(DetailView): # new\n    model = Article\n    template_name = \"article_detail.html\"\nclass ArticleUpdateView(UpdateView): # new\n    model = Article\n    fields = (\n        \"title\",\n        \"body\",\n    )\n    template_name = \"article_edit.html\"",
+        "detail": "articles.views",
+        "documentation": {}
+    },
+    {
+        "label": "ArticleUpdateView",
+        "kind": 6,
+        "importPath": "articles.views",
+        "description": "articles.views",
+        "peekOfCode": "class ArticleUpdateView(UpdateView): # new\n    model = Article\n    fields = (\n        \"title\",\n        \"body\",\n    )\n    template_name = \"article_edit.html\"\nclass ArticleDeleteView(DeleteView): # new\n    model = Article\n    template_name = \"article_delete.html\"",
+        "detail": "articles.views",
+        "documentation": {}
+    },
+    {
+        "label": "ArticleDeleteView",
+        "kind": 6,
+        "importPath": "articles.views",
+        "description": "articles.views",
+        "peekOfCode": "class ArticleDeleteView(DeleteView): # new\n    model = Article\n    template_name = \"article_delete.html\"\n    success_url = reverse_lazy(\"article_list\")\nclass ArticleCreateView(CreateView): # new\n    model = Article\n    template_name = \"article_new.html\"\n    fields = (\n        \"title\",\n        \"body\",",
+        "detail": "articles.views",
+        "documentation": {}
+    },
+    {
+        "label": "ArticleCreateView",
+        "kind": 6,
+        "importPath": "articles.views",
+        "description": "articles.views",
+        "peekOfCode": "class ArticleCreateView(CreateView): # new\n    model = Article\n    template_name = \"article_new.html\"\n    fields = (\n        \"title\",\n        \"body\",\n        \"author\",\n)",
+        "detail": "articles.views",
+        "documentation": {}
+    },
+    {
         "label": "application",
         "kind": 5,
         "importPath": "django_project.asgi",
@@ -456,7 +683,7 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"accounts\",\n    \"pages\",\n    \"crispy_forms\",",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"accounts\",\n    \"pages\",\n    \"articles\",",
         "detail": "django_project.settings",
         "documentation": {}
     },
@@ -591,7 +818,7 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "CRISPY_ALLOWED_TEMPLATE_PACKS = \"bootstrap5\" # new\nCRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\" # new\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
+        "peekOfCode": "CRISPY_ALLOWED_TEMPLATE_PACKS = \"bootstrap5\" # new\nCRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\" # new\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'\nTIME_ZONE = \"America/New_York\"",
         "detail": "django_project.settings",
         "documentation": {}
     },
@@ -600,7 +827,7 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "CRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\" # new\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
+        "peekOfCode": "CRISPY_TEMPLATE_PACK = \"bootstrap5\" #\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\" # new\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'\nTIME_ZONE = \"America/New_York\"",
         "detail": "django_project.settings",
         "documentation": {}
     },
@@ -609,7 +836,7 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\" # new\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\" # new\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'\nTIME_ZONE = \"America/New_York\"",
         "detail": "django_project.settings",
         "documentation": {}
     },
@@ -618,7 +845,7 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'\nTIME_ZONE = \"America/New_York\"",
         "detail": "django_project.settings",
         "documentation": {}
     },
@@ -627,7 +854,7 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "AUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
+        "peekOfCode": "AUTH_USER_MODEL = \"accounts.CustomUser\"\nLOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'\nTIME_ZONE = \"America/New_York\"",
         "detail": "django_project.settings",
         "documentation": {}
     },
@@ -636,7 +863,7 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'",
+        "peekOfCode": "LOGIN_REDIRECT_URL = 'home'\nLOGOUT_REDIRECT_URL = 'home'\nTIME_ZONE = \"America/New_York\"",
         "detail": "django_project.settings",
         "documentation": {}
     },
@@ -645,7 +872,16 @@
         "kind": 5,
         "importPath": "django_project.settings",
         "description": "django_project.settings",
-        "peekOfCode": "LOGOUT_REDIRECT_URL = 'home'",
+        "peekOfCode": "LOGOUT_REDIRECT_URL = 'home'\nTIME_ZONE = \"America/New_York\"",
+        "detail": "django_project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "django_project.settings",
+        "description": "django_project.settings",
+        "peekOfCode": "TIME_ZONE = \"America/New_York\"",
         "detail": "django_project.settings",
         "documentation": {}
     },
@@ -654,7 +890,7 @@
         "kind": 5,
         "importPath": "django_project.urls",
         "description": "django_project.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"accounts.urls\")),\n    path(\"accounts/\", include(\"django.contrib.auth.urls\")),\n    path(\"\", include(\"pages.urls\")),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"accounts.urls\")),\n    path(\"accounts/\", include(\"django.contrib.auth.urls\")),\n    path(\"articles/\", include(\"articles.urls\")), # new\n    path(\"\", include(\"pages.urls\")),\n]",
         "detail": "django_project.urls",
         "documentation": {}
     },
