@@ -75,6 +75,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -275,6 +291,22 @@
         "documentation": {}
     },
     {
+        "label": "reverse_lazy",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -347,6 +379,14 @@
         "documentation": {}
     },
     {
+        "label": "FormView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
         "label": "TemplateView",
         "importPath": "django.views.generic",
         "description": "django.views.generic",
@@ -377,6 +417,22 @@
         "description": "django.conf",
         "isExtraImport": true,
         "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
         "documentation": {}
     },
     {
@@ -417,6 +473,22 @@
         "description": "django.contrib.auth.mixins",
         "isExtraImport": true,
         "detail": "django.contrib.auth.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "SingleObjectMixin",
+        "importPath": "django.views.generic.detail",
+        "description": "django.views.generic.detail",
+        "isExtraImport": true,
+        "detail": "django.views.generic.detail",
         "documentation": {}
     },
     {
@@ -569,11 +641,29 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "articles.migrations.0002_comment",
+        "description": "articles.migrations.0002_comment",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"articles\", \"0001_initial\"),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Comment\",\n            fields=[\n                (",
+        "detail": "articles.migrations.0002_comment",
+        "documentation": {}
+    },
+    {
+        "label": "CommentInline",
+        "kind": 6,
+        "importPath": "articles.admin",
+        "description": "articles.admin",
+        "peekOfCode": "class CommentInline(admin.TabularInline): # new\n    model = Comment\nclass ArticleAdmin(admin.ModelAdmin):\n    inlines = [\n        CommentInline,\n    ]\n    list_display = [\n        \"title\",\n        \"body\",\n        \"author\",",
+        "detail": "articles.admin",
+        "documentation": {}
+    },
+    {
         "label": "ArticleAdmin",
         "kind": 6,
         "importPath": "articles.admin",
         "description": "articles.admin",
-        "peekOfCode": "class ArticleAdmin(admin.ModelAdmin):\n    list_display = [\n        \"title\",\n        \"body\",\n        \"author\",\n    ]\nadmin.site.register(Article, ArticleAdmin)",
+        "peekOfCode": "class ArticleAdmin(admin.ModelAdmin):\n    inlines = [\n        CommentInline,\n    ]\n    list_display = [\n        \"title\",\n        \"body\",\n        \"author\",\n    ]\nadmin.site.register(Article, ArticleAdmin)",
         "detail": "articles.admin",
         "documentation": {}
     },
@@ -587,11 +677,29 @@
         "documentation": {}
     },
     {
+        "label": "CommentForm",
+        "kind": 6,
+        "importPath": "articles.forms",
+        "description": "articles.forms",
+        "peekOfCode": "class CommentForm(forms.ModelForm):\n    class Meta:\n        model = Comment\n        fields = (\"comment\",)",
+        "detail": "articles.forms",
+        "documentation": {}
+    },
+    {
         "label": "Article",
         "kind": 6,
         "importPath": "articles.models",
         "description": "articles.models",
         "peekOfCode": "class Article(models.Model):\n    title = models.CharField(max_length=255)\n    body = models.TextField()\n    date = models.DateTimeField(auto_now_add=True)\n    author = models.ForeignKey(\n            settings.AUTH_USER_MODEL,\n            on_delete=models.CASCADE,\n        )\n    def __str__(self):\n            return self.title",
+        "detail": "articles.models",
+        "documentation": {}
+    },
+    {
+        "label": "Comment",
+        "kind": 6,
+        "importPath": "articles.models",
+        "description": "articles.models",
+        "peekOfCode": "class Comment(models.Model):\n        article = models.ForeignKey(Article, on_delete=models.CASCADE)\n        comment = models.CharField(max_length=140)\n        author = models.ForeignKey(\n               settings.AUTH_USER_MODEL,\n               on_delete=models.CASCADE, \n        )\n        def __str__(self):\n                return self.comment\n        def get_absolute_url(self):",
         "detail": "articles.models",
         "documentation": {}
     },
@@ -605,11 +713,29 @@
         "documentation": {}
     },
     {
+        "label": "CommentGet",
+        "kind": 6,
+        "importPath": "articles.views",
+        "description": "articles.views",
+        "peekOfCode": "class CommentGet(DetailView): # new\n    model = Article\n    template_name = \"article_detail.html\"\n    def get_context_data(self, **kwargs):\n        context = super().get_context_data(**kwargs)\n        context[\"form\"] = CommentForm()\n        return context\nclass CommentPost(SingleObjectMixin, FormView): # new\n    model = Article\n    form_class = CommentForm",
+        "detail": "articles.views",
+        "documentation": {}
+    },
+    {
+        "label": "CommentPost",
+        "kind": 6,
+        "importPath": "articles.views",
+        "description": "articles.views",
+        "peekOfCode": "class CommentPost(SingleObjectMixin, FormView): # new\n    model = Article\n    form_class = CommentForm\n    template_name = \"article_detail.html\"\n    def post(self, request, *args, **kwargs):\n        self.object = self.get_object()\n        return super().post(request, *args, **kwargs)\n    def form_valid(self, form):\n        comment = form.save(commit=False)\n        comment.article = self.object",
+        "detail": "articles.views",
+        "documentation": {}
+    },
+    {
         "label": "ArticleListView",
         "kind": 6,
         "importPath": "articles.views",
         "description": "articles.views",
-        "peekOfCode": "class ArticleListView(LoginRequiredMixin, ListView):\n    model = Article\n    template_name = \"article_list.html\"\nclass ArticleDetailView(LoginRequiredMixin, DetailView): # new\n    model = Article\n    template_name = \"article_detail.html\"\nclass ArticleUpdateView(LoginRequiredMixin, UserPassesTestMixin,  UpdateView): # new\n    model = Article\n    fields = (\n        \"title\",",
+        "peekOfCode": "class ArticleListView(LoginRequiredMixin, ListView):\n    model = Article\n    template_name = \"article_list.html\"\nclass ArticleDetailView(LoginRequiredMixin, DetailView): # new\n    model = Article\n    template_name = \"article_detail.html\"\n    def get_context_data(self, **kwargs): # new\n        context = super().get_context_data(**kwargs)\n        context[\"form\"] = CommentForm()\n        return context",
         "detail": "articles.views",
         "documentation": {}
     },
@@ -618,7 +744,16 @@
         "kind": 6,
         "importPath": "articles.views",
         "description": "articles.views",
-        "peekOfCode": "class ArticleDetailView(LoginRequiredMixin, DetailView): # new\n    model = Article\n    template_name = \"article_detail.html\"\nclass ArticleUpdateView(LoginRequiredMixin, UserPassesTestMixin,  UpdateView): # new\n    model = Article\n    fields = (\n        \"title\",\n        \"body\",\n    )\n    template_name = \"article_edit.html\"",
+        "peekOfCode": "class ArticleDetailView(LoginRequiredMixin, DetailView): # new\n    model = Article\n    template_name = \"article_detail.html\"\n    def get_context_data(self, **kwargs): # new\n        context = super().get_context_data(**kwargs)\n        context[\"form\"] = CommentForm()\n        return context\nclass ArticleDetailView(LoginRequiredMixin, View): # new\n    def get(self, request, *args, **kwargs):\n        view = CommentGet.as_view()",
+        "detail": "articles.views",
+        "documentation": {}
+    },
+    {
+        "label": "ArticleDetailView",
+        "kind": 6,
+        "importPath": "articles.views",
+        "description": "articles.views",
+        "peekOfCode": "class ArticleDetailView(LoginRequiredMixin, View): # new\n    def get(self, request, *args, **kwargs):\n        view = CommentGet.as_view()\n        return view(request, *args, **kwargs)\n    def post(self, request, *args, **kwargs):\n        view = CommentPost.as_view()\n        return view(request, *args, **kwargs)\nclass ArticleUpdateView(LoginRequiredMixin, UserPassesTestMixin,  UpdateView): # new\n    model = Article\n    fields = (",
         "detail": "articles.views",
         "documentation": {}
     },
