@@ -404,6 +404,22 @@
         "documentation": {}
     },
     {
+        "label": "LoginRequiredMixin",
+        "importPath": "django.contrib.auth.mixins",
+        "description": "django.contrib.auth.mixins",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "UserPassesTestMixin",
+        "importPath": "django.contrib.auth.mixins",
+        "description": "django.contrib.auth.mixins",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.mixins",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -593,7 +609,7 @@
         "kind": 6,
         "importPath": "articles.views",
         "description": "articles.views",
-        "peekOfCode": "class ArticleListView(ListView):\n    model = Article\n    template_name = \"article_list.html\"\nclass ArticleDetailView(DetailView): # new\n    model = Article\n    template_name = \"article_detail.html\"\nclass ArticleUpdateView(UpdateView): # new\n    model = Article\n    fields = (\n        \"title\",",
+        "peekOfCode": "class ArticleListView(LoginRequiredMixin, ListView):\n    model = Article\n    template_name = \"article_list.html\"\nclass ArticleDetailView(LoginRequiredMixin, DetailView): # new\n    model = Article\n    template_name = \"article_detail.html\"\nclass ArticleUpdateView(LoginRequiredMixin, UserPassesTestMixin,  UpdateView): # new\n    model = Article\n    fields = (\n        \"title\",",
         "detail": "articles.views",
         "documentation": {}
     },
@@ -602,7 +618,7 @@
         "kind": 6,
         "importPath": "articles.views",
         "description": "articles.views",
-        "peekOfCode": "class ArticleDetailView(DetailView): # new\n    model = Article\n    template_name = \"article_detail.html\"\nclass ArticleUpdateView(UpdateView): # new\n    model = Article\n    fields = (\n        \"title\",\n        \"body\",\n    )\n    template_name = \"article_edit.html\"",
+        "peekOfCode": "class ArticleDetailView(LoginRequiredMixin, DetailView): # new\n    model = Article\n    template_name = \"article_detail.html\"\nclass ArticleUpdateView(LoginRequiredMixin, UserPassesTestMixin,  UpdateView): # new\n    model = Article\n    fields = (\n        \"title\",\n        \"body\",\n    )\n    template_name = \"article_edit.html\"",
         "detail": "articles.views",
         "documentation": {}
     },
@@ -611,7 +627,7 @@
         "kind": 6,
         "importPath": "articles.views",
         "description": "articles.views",
-        "peekOfCode": "class ArticleUpdateView(UpdateView): # new\n    model = Article\n    fields = (\n        \"title\",\n        \"body\",\n    )\n    template_name = \"article_edit.html\"\nclass ArticleDeleteView(DeleteView): # new\n    model = Article\n    template_name = \"article_delete.html\"",
+        "peekOfCode": "class ArticleUpdateView(LoginRequiredMixin, UserPassesTestMixin,  UpdateView): # new\n    model = Article\n    fields = (\n        \"title\",\n        \"body\",\n    )\n    template_name = \"article_edit.html\"\n    def test_func(self): # new\n        obj = self.get_object()\n        return obj.author == self.request.user",
         "detail": "articles.views",
         "documentation": {}
     },
@@ -620,7 +636,7 @@
         "kind": 6,
         "importPath": "articles.views",
         "description": "articles.views",
-        "peekOfCode": "class ArticleDeleteView(DeleteView): # new\n    model = Article\n    template_name = \"article_delete.html\"\n    success_url = reverse_lazy(\"article_list\")\nclass ArticleCreateView(CreateView): # new\n    model = Article\n    template_name = \"article_new.html\"\n    fields = (\n        \"title\",\n        \"body\",",
+        "peekOfCode": "class ArticleDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView): # new\n    model = Article\n    template_name = \"article_delete.html\"\n    success_url = reverse_lazy(\"article_list\")\n    def test_func(self): # new\n        obj = self.get_object()\n        return obj.author == self.request.user\nclass ArticleCreateView(LoginRequiredMixin, CreateView): # new\n    model = Article\n    template_name = \"article_new.html\"",
         "detail": "articles.views",
         "documentation": {}
     },
@@ -629,7 +645,7 @@
         "kind": 6,
         "importPath": "articles.views",
         "description": "articles.views",
-        "peekOfCode": "class ArticleCreateView(CreateView): # new\n    model = Article\n    template_name = \"article_new.html\"\n    fields = (\n        \"title\",\n        \"body\",\n        \"author\",\n)",
+        "peekOfCode": "class ArticleCreateView(LoginRequiredMixin, CreateView): # new\n    model = Article\n    template_name = \"article_new.html\"\n    fields = (\n        \"title\",\n        \"body\",\n    )\n    def form_valid(self, form):\n        form.instance.author = self.request.user\n        return super().form_valid(form)",
         "detail": "articles.views",
         "documentation": {}
     },
